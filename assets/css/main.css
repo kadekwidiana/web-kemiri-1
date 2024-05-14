@@ -26,10 +26,10 @@
   --default-color: #444444;
 
   /* Heading Color - This color is used for titles, headings and secondary elements. */
-  --heading-color: #37517e;
+  --heading-color: #377e45;
 
   /* Accent Color - This is the main accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out. */
-  --accent-color: #47b2e4;
+  --accent-color: #47e44a;
 
   /* Contrast Color - This is a color used for text when the background color is one of the heading, accent, or default colors. Its purpose is to ensure proper contrast and readability when placed over these more dominant colors. */
   --contrast-color: #ffffff;
@@ -41,7 +41,7 @@
   --nav-color: #ffffff;
 
   /* Nav Hover Color - This color is applied to main navmenu links when they are hovered over. */
-  --nav-hover-color: #47b2e4;
+  --nav-hover-color: #47e44a;
 
   /* Nav Dropdown Background Color - This color is used as the background for dropdown boxes that appear when hovering over primary navigation items. */
   --nav-dropdown-background-color: #ffffff;
@@ -56,6 +56,53 @@
 /* Smooth scroll */
 :root {
   scroll-behavior: smooth;
+}
+
+/* dropdown menu switch language */
+.dropbtn {
+  padding: 0;
+  /* font-size: 16px; */
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  vertical-align: middle;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 70px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.a-language {
+  color: black;
+  padding: 10px 10px;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.a-language:hover {
+  background-color: white;
+  cursor: pointer;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  left: -70%;
+}
+
+.a-language {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -92,7 +139,7 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: #3d4d6a;
+  --background-color: #2D4D24;
   --heading-color: #ffffff;
   color: var(--default-color);
   background-color: var(--background-color);
@@ -106,7 +153,7 @@ h6 {
 }
 
 .header .logo img {
-  max-height: 36px;
+  max-height: 66px;
   margin-right: 8px;
 }
 
@@ -163,7 +210,7 @@ h6 {
 /* Index Page Header on Scroll
 ------------------------------*/
 .index-page.scrolled .header {
-  --background-color: rgba(40, 58, 90, 0.9);
+  --background-color: #2D4D24;
 }
 
 /*--------------------------------------------------------------
@@ -846,7 +893,15 @@ section,
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
-  --background-color: #37517e;
+  /* --background-color: #2D4D24; */
+  background-image: url('/assets/img/bg-hero.jpeg');
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --contrast-color: #ffffff;
@@ -1207,6 +1262,12 @@ section,
   transition: all ease-in-out 0.4s;
   background-color: var(--contrast-color);
   height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .services .service-item .icon {
@@ -1214,8 +1275,8 @@ section,
 }
 
 .services .service-item .icon i {
-  color: var(--accent-color);
-  font-size: 36px;
+  /* color: var(--accent-color); */
+  font-size: 56px;
   transition: 0.3s;
 }
 
@@ -1223,6 +1284,7 @@ section,
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 20px;
+  color: #444444;
 }
 
 .services .service-item h4 a {

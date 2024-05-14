@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 
 <head>
   <meta charset="utf-8">
@@ -44,18 +44,37 @@
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
-        <img src="assets/img/logo.png" alt="">
+        <img height="300px" src="assets/img/logo.png" alt="">
         <h1 class="sitename">Zeential.oil</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="">Home</a></li>
-          <li><a href="#about">Tentang Kami</a></li>
-          <li><a href="#services">Layanan</a></li>
-          <li><a href="#produk">Produk</a></li>
-          <li><a href="#team">Tim</a></li>
-          <li><a href="#contact">Kontak</a></li>
+          <li><a href="#hero" class="" data-i18n="navbar_home"></a></li>
+          <li><a href="#about" data-i18n="navbar_about"></a></li>
+          <li><a href="#produk" data-i18n="navbar_product"></a></li>
+          <li><a href="#services" data-i18n="navbar_medsos"></a></li>
+          <li><a href="#team" data-i18n="navbar_tim"></a></li>
+          <li><a href="#contact" data-i18n="navbar_contact"></a></li>
+          <li>
+            <a>
+              <div class="dropdown">
+                <div class="dropbtn">
+                  <img
+                    src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                    style="width: 30px; height: 20px;" />
+                </div>
+                <div class="dropdown-content">
+                  <span class="a-language" data-lang="en" href="#"><img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png"
+                      style="width: 30px; height: 20px; margin-right: 0.5rem;" />EN</span>
+                  <span class="a-language" data-lang="id" href="#"><img
+                      src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png"
+                      style="width: 30px; height: 20px; margin-right: 0.5rem;" />ID</span>
+                </div>
+              </div>
+            </a>
+          </li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -70,13 +89,13 @@
       <div class="container">
         <div class="row gy-4">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
-            <h1 class="">Minyak Kemiri Zeential.oil</h1>
-            <p class="">100% minyak kemiri asli dari Nusantara</p>
+            <h1 class="" data-i18n="hero_title"></h1>
+            <p class="" data-i18n="hero_deskripsi"></p>
             <div class="d-flex">
-              <a href="#produk" class="btn-get-started">Lihat Produk</a>
+              <a href="#produk" class="btn-get-started" data-i18n="hero_lihat_produk"></a>
               <a href="https://youtu.be/ZgcBsRIk-vA?si=nkDAYmrJiDA4G9Kc"
-                class="glightbox btn-watch-video d-flex align-items-center"><i
-                  class="bi bi-play-circle"></i><span>Tonton Video</span></a>
+                class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span
+                  data-i18n="hero_tonton_video"></span></a>
             </div>
           </div>
           <div class="col-lg-6 order-2 order-lg-1 d-flex justify-content-end">
@@ -92,7 +111,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2 class="">Tentang Kami</h2>
+        <h2 class="" data-i18n="tentang_kami"></h2>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -104,11 +123,12 @@
           </div>
 
           <div class="col-lg-6 flex flex-column justify-content-center" data-aos="fade-up" data-aos-delay="200">
-            <p>Zeential Oil adalah pilihan utama bagi mereka yang mencari perawatan alami dan holistik untuk rambut dan
-              kulit mereka. Dirumuskan dengan cermat dari minyak kemiri murni yang telah teruji secara klinis, Zeential
-              Oil menggabungkan kekuatan alam untuk memberikan manfaat optimal.</p>
-            <p>Dengan fokus pada menjaga kelembapan, menguatkan, dan meremajakan, kami di Zeential Oil berkomitmen untuk
-              memberikan produk berkualitas tinggi yang memenuhi kebutuhan perawatan kecantikan Anda.</p>
+            <h4 data-i18n="tentang_title_1"></h4>
+            <p data-i18n="tentang_desc_1"></p>
+            <h4 data-i18n="tentang_title_2"></h4>
+            <p data-i18n="tentang_desc_2"></p>
+            <h4 data-i18n="tentang_title_3"></h4>
+            <p data-i18n="tentang_desc_3"></p>
           </div>
 
         </div>
@@ -127,44 +147,37 @@
           <div class="col-lg-7 d-flex flex-column justify-content-center order-2 order-lg-1">
 
             <div class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
-              <h3 class=""><span class="">Manfaat Unggulan Minyak Kemiri</span><strong>untuk Kesehatan dan
-                  Kecantikan</strong></h3>
-              <p class="">
+              <h3 class=""><span class=""></span><strong data-i18n="tentang_manfaat_minyak_kemiri"></strong></h3>
+              <!-- <p class="">
                 Minyak kemiri bukan hanya sekadar produk kecantikan biasa. Temukan bagaimana minyak alami ini dapat
                 meningkatkan kesehatan kulit dan rambut Anda secara signifikan. Dengan kandungan yang kaya akan nutrisi,
                 minyak kemiri merupakan pilihan utama untuk perawatan alami yang efektif.
-              </p>
+              </p> -->
             </div>
 
             <div class="faq-container px-xl-5" data-aos="fade-up" data-aos-delay="200">
 
               <div class="faq-item faq-active">
 
-                <h3><span>01</span> Apa yang membuat minyak kemiri begitu istimewa?</h3>
+                <h3 data-i18n="tentang_manfaat_1"></h3>
                 <div class="faq-content">
-                  <p>Minyak kemiri dikenal karena kandungan asam lemak esensialnya yang membantu menjaga kelembapan
-                    kulit dan rambut. Selain itu, minyak ini juga mengandung vitamin yang penting untuk kesehatan kulit
-                    dan pertumbuhan rambut.</p>
+                  <p data-i18n="tentang_manfaat_1_desc"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>02</span> Bagaimana minyak kemiri membantu merawat kulit?</h3>
+                <h3 data-i18n="tentang_manfaat_2"></h3>
                 <div class="faq-content">
-                  <p>Minyak kemiri memiliki sifat melembapkan yang membantu menjaga kulit tetap lembut dan elastis.
-                    Kandungan antioksidannya juga membantu melawan radikal bebas yang dapat menyebabkan penuaan dini.
-                  </p>
+                  <p data-i18n="tentang_manfaat_2_desc"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
 
               <div class="faq-item">
-                <h3><span>03</span> Bagaimana minyak kemiri dapat digunakan untuk perawatan rambut?</h3>
+                <h3 data-i18n="tentang_manfaat_3"></h3>
                 <div class="faq-content">
-                  <p>Minyak kemiri dapat diterapkan langsung ke kulit kepala atau dicampurkan ke dalam produk perawatan
-                    rambut. Ini membantu menguatkan akar rambut, mencegah kerontokan, dan meningkatkan kilau alami
-                    rambut.</p>
+                  <p data-i18n="tentang_manfaat_3_desc"></p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -338,9 +351,8 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Layanan</h2>
-        <p>Temukan solusi terbaik untuk kebutuhan bisnis Anda dengan layanan kami. Kami siap membantu Anda dalam
-          mencapai tujuan bisnis Anda dengan solusi yang efektif dan terpercaya.</p>
+        <h2 data-i18n="medsos"></h2>
+        <p data-i18n="medsos_desc"></p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -349,40 +361,33 @@
 
           <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-activity icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Pengiriman</a></h4>
-              <p>Layanan pengiriman cepat dan aman untuk produk Anda. Tiba tepat waktu dan dalam kondisi baik.</p>
+              <div class="icon"><a href="" style="color: green;"><i class="bi bi-whatsapp"></a></i></div>
+              <h4>WhatApps</h4>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-bounding-box-circles icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Ambil Ke Lokasi</a></h4>
-              <p>Nikmati fleksibilitas pengambilan barang langsung dari lokasi Anda. Kehandalan dalam proses pengambilan
-                barang.</p>
+              <div class="icon"><a href="" style="color: blue;"><i class="bi bi-facebook"></a></i></div>
+              <h4>Facebook</h4>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-calendar4-week icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Custom</a></h4>
-              <p>Layanan kustom yang sesuai dengan kebutuhan bisnis Anda. Solusi yang dirancang khusus untuk Anda.</p>
+              <div class="icon"><a href="" style="color: #e95950;"><i class="bi bi-instagram"></a></i></div>
+              <h4>Instagram</h4>
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-xl-3 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <div class="icon"><i class="bi bi-broadcast icon"></i></div>
-              <h4><a href="service-details.html" class="stretched-link">Konsultasi</a></h4>
-              <p>Dapatkan bantuan ahli untuk mengelola bisnis Anda. Solusi yang efektif untuk pertumbuhan bisnis yang
-                berkelanjutan.</p>
+              <div class="icon"><a href="" style="color: black;"><i class="bi bi-tiktok"></a></i></div>
+              <h4>Tiktok</h4>
             </div>
           </div><!-- End Service Item -->
 
         </div>
-
       </div>
 
     </section><!-- /Services Section -->
@@ -415,7 +420,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Tim Produksi</h2>
+        <h2>Team</h2>
         <p>Tim kami yang berdedikasi untuk menghasilkan produk berkualitas tinggi. Kami berkomitmen untuk memberikan
           yang terbaik untuk kecantikan dan kesehatan Anda.</p>
       </div><!-- End Section Title -->
@@ -487,89 +492,28 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Team Member -->
+          </div><!- <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="team-member d-flex align-items-start">
+              <div class="pic"><img src="assets/img/gambar-orang.jpg" class="img-fluid" alt=""></div>
+              <div class="member-info">
+                <h4>Made Kadek</h4>
+                <span>Produser</span>
+                <p>Sebagai produser, Made Kadek bertanggung jawab untuk memastikan setiap detail produksi berjalan
+                  lancar.</p>
+                <div class="social">
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""> <i class="bi bi-tiktok"></i> </a>
+                </div>
+              </div>
+            </div>
+        </div><!-- End Team Member -->
 
-        </div>
+      </div>
 
       </div>
 
     </section><!-- /Team Section -->
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials section">
-
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Testimoni</h2>
-        <p>Baca testimoni dari pelanggan kami dan temukan pengalaman mereka dengan produk Zeential Oil.</p>
-      </div><!-- End Section Title -->
-
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="swiper">
-          <script type="application/json" class="swiper-config">
-            {
-              "loop": true,
-              "speed": 600,
-              "autoplay": {
-                "delay": 5000
-              },
-              "slidesPerView": "auto",
-              "pagination": {
-                "el": ".swiper-pagination",
-                "type": "bullets",
-                "clickable": true
-              }
-            }
-          </script>
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Wayan Cupak Gerantang</h3>
-                <h4>Pegawai</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Minyak kemiri dari Zeential Oil telah mengubah cara perawatan rambut saya. Kualitasnya yang luar
-                    biasa membuat rambut saya lebih kuat dan berkilau. Saya sangat merekomendasikan produk ini kepada
-                    semua orang yang mencari perawatan alami dan efektif untuk rambut mereka.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Nyoman Ayu</h3>
-                <h4>Pekerja Swasta</h4>
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                    class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                </div>
-                <p>
-                  <i class="bi bi-quote quote-icon-left"></i>
-                  <span>Saya sangat terkesan dengan kualitas produk dari Zeential Oil. Minyak kemiri mereka tidak hanya
-                    membuat rambut saya lebih sehat dan berkilau, tetapi juga memberikan perlindungan alami untuk kulit
-                    saya. Produk ini sungguh mengagumkan dan saya tidak ragu untuk merekomendasikannya kepada
-                    teman-teman dan kolega saya.</span>
-                  <i class="bi bi-quote quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-    </section><!-- /Testimonials Section -->
-
     <!-- Faq 2 Section -->
     <section id="faq-2" class="faq-2 section">
 
@@ -605,16 +549,6 @@
                   <p>Zeential Oil dapat ditambahkan ke shampoo atau conditioner Anda, atau digunakan sebagai treatment
                     intensif dengan mengoleskannya langsung ke kulit kepala sebelum keramas. Pijat lembut dan biarkan
                     selama beberapa menit sebelum dibilas.</p>
-                </div>
-                <i class="faq-toggle bi bi-chevron-right"></i>
-              </div><!-- End Faq item-->
-
-              <div class="faq-item" data-aos="fade-up" data-aos-delay="400">
-                <i class="faq-icon bi bi-question-circle"></i>
-                <h3>Apa manfaat langsung dari penggunaan Zeential Oil untuk kulit?</h3>
-                <div class="faq-content">
-                  <p>Zeential Oil membantu menghidrasi kulit kering, meredakan peradangan seperti jerawat, dan
-                    memudarkan bekas luka atau bintik hitam, menjadikan kulit tampak lebih sehat dan bercahaya.</p>
                 </div>
                 <i class="faq-toggle bi bi-chevron-right"></i>
               </div><!-- End Faq item-->
@@ -701,7 +635,7 @@
                 <i class="bi bi-geo-alt flex-shrink-0"></i>
                 <div>
                   <h3>Alamat</h3>
-                  <p>Singaraja, Bali</p>
+                  <p>jln. Wijaya kusuma. Gang III. No.8, Buleleng</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -709,7 +643,7 @@
                 <i class="bi bi-telephone flex-shrink-0"></i>
                 <div>
                   <h3>Telepon</h3>
-                  <p>0898989898</p>
+                  <p>087875866394</p>
                 </div>
               </div><!-- End Info Item -->
 
@@ -721,7 +655,7 @@
                 </div>
               </div>
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.852155585672!2d115.08286167745281!3d-8.116531971060445!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd21665cef49255%3A0x1abe2912c8d6af5a!2sUniversitas%20Pendidikan%20Ganesha!5e0!3m2!1sid!2sid!4v1715603231452!5m2!1sid!2sid"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.8252387944754!2d115.08314207476973!3d-8.11926929191014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd19a73d7527351%3A0xc7523f989ab07da7!2sJl.%20Wijaya%20Kusuma%20No.8%2C%20Banyuasri%2C%20Kec.%20Buleleng%2C%20Kabupaten%20Buleleng%2C%20Bali%2081116!5e0!3m2!1sid!2sid!4v1715686448698!5m2!1sid!2sid"
                 style="border:0; width: 100%; height: 270px;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
@@ -776,9 +710,14 @@
             <span class="sitename">Zeential.oil</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>Puput</p>
-            <p>Singaraja, Bali</p>
-            <p class="mt-3"><strong>Telepon:</strong> <span>0898989898</span></p>
+
+            <p> Kami dengan bangga menghadirkan minyak kemiri murni sebagai solusi terpercaya untuk menjaga keindahan
+              dan kesehatan kulit serta rambut Anda.
+              Diproduksi dengan teliti dan dengan mempertahankan keaslian alaminya, minyak kemiri kami tidak hanya
+              membantu memelihara kecantikan secara luar
+              biasa, tetapi juga memberikan nutrisi mendalam yang diperlukan untuk kesehatan rambut dan kulit yang
+              optimal. </p>
+            <p class="mt-3"><strong>Telepon:</strong> <span>087875866394</span></p>
             <p><strong>Email:</strong> <span>info@example.com</span></p>
           </div>
         </div>

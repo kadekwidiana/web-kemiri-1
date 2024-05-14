@@ -6,8 +6,61 @@
 * License: https://bootstrapmade.com/license/
 */
 
-(function() {
+(function () {
   "use strict";
+
+  /*==================== MULTI LANGUAGE ====================*/
+  // Function to fetch language data
+  async function fetchLanguageData(lang) {
+    const response = await fetch(`assets/languages/${lang}.json`);
+    return response.json();
+  }
+
+  // Function to set the language preference
+  function setLanguagePreference(lang) {
+    localStorage.setItem('language', lang);
+    location.reload();
+  }
+
+  // Function to update content based on selected language
+  function updateContent(langData) {
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+      const key = element.getAttribute('data-i18n');
+      element.textContent = langData[key];
+    });
+  }
+
+  // Function to change language
+  async function changeLanguage(lang) {
+    await setLanguagePreference(lang);
+
+    const langData = await fetchLanguageData(lang);
+    updateContent(langData);
+  }
+
+  // Call updateContent() on page load
+  window.addEventListener('DOMContentLoaded', async () => {
+    const userPreferredLanguage = localStorage.getItem('language') || 'en';
+    const langData = await fetchLanguageData(userPreferredLanguage);
+    updateContent(langData);
+    const flagImg = document.querySelector('.dropbtn img');
+
+    if (userPreferredLanguage === 'en') {
+      flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Flag_of_the_United_Kingdom_%281-2%29.svg/1200px-Flag_of_the_United_Kingdom_%281-2%29.svg.png';
+      flagImg.alt = 'English Flag';
+    } else if (userPreferredLanguage === 'id') {
+      flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png';
+      flagImg.alt = 'Indonesian Flag';
+    }
+
+    // Add event listeners for language change
+    document.querySelectorAll('.a-language').forEach(element => {
+      element.addEventListener('click', (event) => {
+        const lang = event.target.closest('.a-language').getAttribute('data-lang');
+        changeLanguage(lang);
+      });
+    });
+  });
 
   /**
    * Apply .scrolled class to the body as the page is scrolled down
@@ -50,7 +103,7 @@
    * Toggle mobile nav dropdowns
    */
   document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
+    navmenu.addEventListener('click', function (e) {
       if (document.querySelector('.mobile-nav-active')) {
         e.preventDefault();
         this.parentNode.classList.toggle('active');
@@ -115,7 +168,7 @@
    * Init swiper sliders
    */
   function initSwiper() {
-    document.querySelectorAll('.swiper').forEach(function(swiper) {
+    document.querySelectorAll('.swiper').forEach(function (swiper) {
       let config = JSON.parse(swiper.querySelector('.swiper-config').innerHTML.trim());
       new Swiper(swiper, config);
     });
@@ -139,7 +192,7 @@
     new Waypoint({
       element: item,
       offset: '80%',
-      handler: function(direction) {
+      handler: function (direction) {
         let progress = item.querySelectorAll('.progress .progress-bar');
         progress.forEach(el => {
           el.style.width = el.getAttribute('aria-valuenow') + '%';
@@ -151,13 +204,13 @@
   /**
    * Init isotope layout and filters
    */
-  document.querySelectorAll('.isotope-layout').forEach(function(isotopeItem) {
+  document.querySelectorAll('.isotope-layout').forEach(function (isotopeItem) {
     let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
     let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
     let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
 
     let initIsotope;
-    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function() {
+    imagesLoaded(isotopeItem.querySelector('.isotope-container'), function () {
       initIsotope = new Isotope(isotopeItem.querySelector('.isotope-container'), {
         itemSelector: '.isotope-item',
         layoutMode: layout,
@@ -166,8 +219,8 @@
       });
     });
 
-    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function(filters) {
-      filters.addEventListener('click', function() {
+    isotopeItem.querySelectorAll('.isotope-filters li').forEach(function (filters) {
+      filters.addEventListener('click', function () {
         isotopeItem.querySelector('.isotope-filters .filter-active').classList.remove('filter-active');
         this.classList.add('filter-active');
         initIsotope.arrange({
@@ -184,7 +237,7 @@
   /**
    * Correct scrolling position upon page load for URLs containing hash links.
    */
-  window.addEventListener('load', function(e) {
+  window.addEventListener('load', function (e) {
     if (window.location.hash) {
       if (document.querySelector(window.location.hash)) {
         setTimeout(() => {
