@@ -274,4 +274,19 @@
   window.addEventListener('load', navmenuScrollspy);
   document.addEventListener('scroll', navmenuScrollspy);
 
+  // SEND MESSAGE TO WA
+  document.getElementById('whatsapp-button').addEventListener('click', function () {
+    const name = document.getElementById('name-field').value;
+    const email = document.getElementById('email-field').value;
+    const subject = document.getElementById('subject-field').value;
+    const message = document.getElementById('message-field').value;
+
+    const whatsappNumber = '087875866394';
+    const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      `Nama: ${name}\nEmail: ${email}\nSubjek: ${subject}\nPesan: ${message}`
+    )}`;
+
+    window.open(url, '_blank');
+  });
+
 })();
