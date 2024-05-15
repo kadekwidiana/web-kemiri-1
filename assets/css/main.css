@@ -2064,6 +2064,20 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
+.pesan_sekarang {
+  color: var(--contrast-color);
+  background: var(--accent-color);
+  border: 0;
+  padding: 10px 30px;
+  transition: 0.4s;
+  border-radius: 50px;
+}
+
+.pesan_sekarang:hover {
+  background: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: #444444;
+}
+
 @keyframes animate-loading {
   0% {
     transform: rotate(0deg);
