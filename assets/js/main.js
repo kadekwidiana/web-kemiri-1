@@ -51,6 +51,9 @@
     } else if (userPreferredLanguage === 'id') {
       flagImg.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Flag_of_Indonesia.svg/2560px-Flag_of_Indonesia.svg.png';
       flagImg.alt = 'Indonesian Flag';
+    } else if (userPreferredLanguage === 'mas') {
+      flagImg.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBLkNL-gli9VVjuGF3RJN5cgfEVS8Ot-wOjqlSQuWkbQ&s';
+      flagImg.alt = 'Malaysia Flag';
     }
 
     // Add event listeners for language change
