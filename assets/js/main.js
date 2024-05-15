@@ -281,7 +281,7 @@
     const subject = document.getElementById('subject-field').value;
     const message = document.getElementById('message-field').value;
 
-    const whatsappNumber = '087875866394';
+    const whatsappNumber = '+6287875866394';
     const url = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
       `Nama: ${name}\nEmail: ${email}\nSubjek: ${subject}\nPesan: ${message}`
     )}`;
